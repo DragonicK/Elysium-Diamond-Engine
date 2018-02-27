@@ -27,11 +27,12 @@ namespace Elysium_Diamond.DirectX {
         //        fCollection.AddFontFile(fontName); 
        //     }
         //    else { 
-             fCollection.AddFontFile($"{Environment.CurrentDirectory}\\Data\\Font\\OpenSans-Light.ttf"); 
+        string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+             fCollection.AddFontFile($"{AppData}/Elysium/Data/Font/OpenSans-Light.ttf"); 
         //    } 
-             
-          //  fCollection.Families[0] 
-         //  
+
+            //  fCollection.Families[0] 
+            //  
             #endregion
 
             var font = new SD.Font(fCollection.Families[0], size, SD.FontStyle.Regular, SD.GraphicsUnit.Pixel);

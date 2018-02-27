@@ -1,5 +1,6 @@
 ﻿using SharpDX;
 using SharpDX.Direct3D9;
+using System;
 using Color = SharpDX.Color;
 
 namespace Elysium_Diamond.DirectX {
@@ -32,10 +33,10 @@ namespace Elysium_Diamond.DirectX {
             Enabled = true;
             DrawText = true;
             SpriteFlags = SpriteFlags.AlphaBlend;
-
-            textureBack = EngineTexture.TextureFromFile($"./Data/Graphics/{name}_back.png", width, height);
-            textureColor = EngineTexture.TextureFromFile($"./Data/Graphics/{name}_color.png", width, height);
-            Texture = EngineTexture.TextureFromFile($"./Data/Graphics/{name}_border.png", width, height);                
+            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            textureBack = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/{name}_back.png", width, height);
+            textureColor = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/{name}_color.png", width, height);
+            Texture = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/{name}_border.png", width, height);                
         }
 
         /// <summary>

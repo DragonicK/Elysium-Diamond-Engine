@@ -1,6 +1,7 @@
 ﻿using Elysium_Diamond.DirectX;
 using SharpDX;
 using SharpDX.Direct3D9;
+using System;
 
 namespace Elysium_Diamond.EngineWindow {
     public static class WindowSelectedItem {
@@ -70,8 +71,8 @@ namespace Elysium_Diamond.EngineWindow {
             slot.Size = new Size2(40, 40);
             slot.BorderRect = new Rectangle(6, 6, 34, 34);
             slot.SourceRect = new Rectangle(0, 0, 40, 40);
-
-            texture = EngineTexture.TextureFromFile("./Data/Graphics/slot.png", 40, 40);
+            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            texture = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/slot.png", 40, 40);
         }
 
         /// <summary>

@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Collections;
 using System.Windows.Forms;
+using System;
 
 namespace Elysium_Diamond.Resource {
     /// <summary>
@@ -37,12 +38,13 @@ namespace Elysium_Diamond.Resource {
         /// </summary>
         /// <returns></returns>
         public static bool Read() {
-            if (!File.Exists("./Data/experience.bin")) {
+            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            if (!File.Exists($"{AppData}/Elysium/Data/experience.bin")) {
                 MessageBox.Show("O arquivo de experiência não foi encontado.");
                 return false;
             }
                 
-            using (FileStream file = new FileStream("./Data/experience.bin", FileMode.Open, FileAccess.Read)) {
+            using (FileStream file = new FileStream($"{AppData}/Elysium/Data/experience.bin", FileMode.Open, FileAccess.Read)) {
                 BinaryReader reader = new BinaryReader(file);
 
                 var lenght = reader.ReadInt32();

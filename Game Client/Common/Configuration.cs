@@ -42,7 +42,7 @@ namespace Elysium_Diamond.Common {
         /// <summary>
         /// Caminho do cliente.
         /// </summary>
-        public static string GamePath { get; set; } = Environment.CurrentDirectory;
+        public static string GamePath { get; set; } = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +"/Elysium/";
 
         #endregion
 
@@ -52,6 +52,7 @@ namespace Elysium_Diamond.Common {
         public static int PingEnd { get; set; }
         public static int Latency { get; set; }
         #endregion
+
 
         /// <summary>
         /// lista de config.
@@ -63,9 +64,9 @@ namespace Elysium_Diamond.Common {
         /// </summary>
         /// <returns></returns>
         public static bool Open() {
-            if (!File.Exists(FILE_CONFIG)) { return false; }
+            if (!File.Exists(GamePath + FILE_CONFIG)) { return false; }
 
-            using (FileStream file = new FileStream(FILE_CONFIG, FileMode.Open, FileAccess.Read)) {
+            using (FileStream file = new FileStream(GamePath + FILE_CONFIG, FileMode.Open, FileAccess.Read)) {
                 BinaryReader reader = new BinaryReader(file);
 
                 cache.Add("IP", "127.0.0.1");
@@ -90,7 +91,7 @@ namespace Elysium_Diamond.Common {
         /// Salva o arquivo de configuração.
         /// </summary>
         public static void Save() {
-            using (FileStream file = new FileStream(FILE_CONFIG, FileMode.Create, FileAccess.Write)) {
+            using (FileStream file = new FileStream(GamePath + FILE_CONFIG, FileMode.Create, FileAccess.Write)) {
                 BinaryWriter writer = new BinaryWriter(file);
 
                 //save
