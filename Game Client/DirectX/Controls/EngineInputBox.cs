@@ -39,9 +39,8 @@ namespace Elysium_Diamond.DirectX {
             Visible = false;
             TextTransparency = 255;
 
-            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             background = new EngineObject();
-            background.Texture = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/inputbox.png", 424, 163);
+            background.Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/inputbox.png", 424, 163);
             background.Size = new Size2(424, 163);
             background.Position = Position;
             background.SourceRect = new Rectangle(0, 0, 424, 163);

@@ -33,10 +33,9 @@ namespace Elysium_Diamond.DirectX {
             Enabled = true;
             DrawText = true;
             SpriteFlags = SpriteFlags.AlphaBlend;
-            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            textureBack = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/{name}_back.png", width, height);
-            textureColor = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/{name}_color.png", width, height);
-            Texture = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/{name}_border.png", width, height);                
+            textureBack = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/{name}_back.png", width, height);
+            textureColor = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/{name}_color.png", width, height);
+            Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/{name}_border.png", width, height);                
         }
 
         /// <summary>

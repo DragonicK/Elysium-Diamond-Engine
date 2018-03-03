@@ -100,8 +100,7 @@ namespace Elysium_Diamond.DirectX {
             TextVisible = true;
             Password = false;
             PasswordText = string.Empty;
-            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            Texture = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/{name}.png", width, height);
+            Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/{name}.png", width, height);
             varTime = Environment.TickCount;
         }
 

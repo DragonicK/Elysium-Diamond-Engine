@@ -40,8 +40,7 @@ namespace Elysium_Diamond.EngineWindow {
             background = new EngineObject();
             background.Position = Position;
             background.Size = new Size2(320, 224);
-            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            background.Texture = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/talent_view.png");
+            background.Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/talent_view.png");
             background.SourceRect = new Rectangle(0, 0, 320, 224);
         }
 

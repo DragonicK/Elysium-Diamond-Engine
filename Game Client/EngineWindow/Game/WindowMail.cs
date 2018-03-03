@@ -92,16 +92,15 @@ namespace Elysium_Diamond.EngineWindow {
             Messages = new List<Mail>();
             Item = new Item();
 
-            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            texture_mailrow[0] = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/mail_row_normal.png", 288, 64);
-            texture_mailrow[1] = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/mail_row_selected.png", 288, 64);
+            texture_mailrow[0] = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/mail_row_normal.png", 288, 64);
+            texture_mailrow[1] = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/mail_row_selected.png", 288, 64);
 
-            scroll = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/scrollbar_198.png", 10, 218);
+            scroll = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/scrollbar_198.png", 10, 218);
 
             background = new EngineObject();
             background.Position = Position;
             background.Size = new Size2(320, 352);
-            background.Texture = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/cash_buy.png");
+            background.Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/cash_buy.png");
             background.SourceRect = new Rectangle(0, 0, 320, 352);
 
             button[0] = new EngineButton("new", 128, 32);
@@ -155,10 +154,10 @@ namespace Elysium_Diamond.EngineWindow {
             arrows[1].MouseUp += ArrowDown_MouseUp;
 
             #region Read Mail 
-            texture_title = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/textbox.png", 256, 32);
-            texture_money = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/textbox_2.png", 224, 32);
-            texture_message = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/text_message.png", 256, 128);
-            texture_slot = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/slot.png", 288, 64);
+            texture_title = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/textbox.png", 256, 32);
+            texture_money = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/textbox_2.png", 224, 32);
+            texture_message = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/text_message.png", 256, 128);
+            texture_slot = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/slot.png", 288, 64);
 
             item_slot = new EngineObject();
             item_slot.Position = new Point(Position.X + 247, Position.Y + 225);

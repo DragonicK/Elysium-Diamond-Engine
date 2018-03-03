@@ -38,13 +38,12 @@ namespace Elysium_Diamond.Resource {
         /// </summary>
         /// <returns></returns>
         public static bool Read() {
-            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            if (!File.Exists($"{AppData}/Elysium/Data/experience.bin")) {
+            if (!File.Exists($"{Common.Configuration.GamePath}/Data/experience.bin")) {
                 MessageBox.Show("O arquivo de experiência não foi encontado.");
                 return false;
             }
                 
-            using (FileStream file = new FileStream($"{AppData}/Elysium/Data/experience.bin", FileMode.Open, FileAccess.Read)) {
+            using (FileStream file = new FileStream($"{Common.Configuration.GamePath}/Data/experience.bin", FileMode.Open, FileAccess.Read)) {
                 BinaryReader reader = new BinaryReader(file);
 
                 var lenght = reader.ReadInt32();

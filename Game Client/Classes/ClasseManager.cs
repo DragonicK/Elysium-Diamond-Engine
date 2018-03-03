@@ -15,8 +15,7 @@ namespace Elysium_Diamond.Classes {
         /// </summary>
         public static void Initialize() {
             Classes = new List<ClasseDescription>();
-            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var value = Directory.GetFiles($"{AppData}/Elysium/Data/Classes/");
+            var value = Directory.GetFiles($"{Common.Configuration.GamePath}/Data/Classes/");
             foreach (var file in value) { Classes.Add(GetClasse(file)); }
         }
 

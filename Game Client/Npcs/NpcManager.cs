@@ -20,10 +20,9 @@ namespace Elysium_Diamond.Npcs {
         /// </summary>
         /// <returns></returns>
         public static bool OpenData() {
-            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            if (!File.Exists($"{AppData}/Elysium/Data/npc.bin")) return false;
+            if (!File.Exists($"{Common.Configuration.GamePath}/Data/npc.bin")) return false;
 
-            using (FileStream file = new FileStream($"{AppData}/Elysium/Data/npc.bin", FileMode.Open, FileAccess.Read)) {
+            using (FileStream file = new FileStream($"{Common.Configuration.GamePath}/Data/npc.bin", FileMode.Open, FileAccess.Read)) {
                 BinaryReader reader = new BinaryReader(file);
 
                 var lenght = reader.ReadInt32();

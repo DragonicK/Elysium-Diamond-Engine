@@ -43,8 +43,7 @@ namespace Elysium_Diamond.DirectX {
                 slots[n].BorderRect = new Rectangle(6, 6, 34, 34);
                 slots[n].SourceRect = new Rectangle(0, 0, 40, 40);
             }
-            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            Texture = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/slot.png", 40, 40);
+            Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/slot.png", 40, 40);
         }
         
         /// <summary>

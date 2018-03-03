@@ -45,13 +45,12 @@ namespace Elysium_Diamond.EngineWindow {
         public static void Initialize() {
             Position = new Point(322,  88);
 
-            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            background = new EngineObject($"{AppData}/Elysium/Data/Graphics/stats_back.png");
+            background = new EngineObject($"{Common.Configuration.GamePath}/Data/Graphics/stats_back.png");
             background.Size = new Size2(380, 544);
             background.Position = Position;
             background.SourceRect = new Rectangle(0, 0, 369, 536);
 
-            slot = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/slot.png");
+            slot = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/slot.png");
         }
 
          /// <summary>

@@ -80,8 +80,7 @@ namespace Elysium_Diamond.DirectX {
             TextVisible = true;
             TextTransparency = byte.MaxValue;
             TextFontStyle = EngineFontStyle.Regular;
-            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            Texture = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/{name}.png", width, height);
+            Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/{name}.png", width, height);
             Size = new Size2(width, height);
             SourceRect = new Rectangle(0, 0, width, height);
         }

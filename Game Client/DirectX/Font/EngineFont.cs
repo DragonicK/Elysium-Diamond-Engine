@@ -27,8 +27,7 @@ namespace Elysium_Diamond.DirectX {
         //        fCollection.AddFontFile(fontName); 
        //     }
         //    else { 
-        string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-             fCollection.AddFontFile($"{AppData}/Elysium/Data/Font/OpenSans-Light.ttf"); 
+             fCollection.AddFontFile($"{Common.Configuration.GamePath}/Data/Font/OpenSans-Light.ttf"); 
         //    } 
 
             //  fCollection.Families[0] 

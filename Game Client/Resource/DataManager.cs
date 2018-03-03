@@ -43,25 +43,24 @@ namespace Elysium_Diamond.Resource {
         public static void Initialize() {
             items = new HashSet<Item>();
             talents = new HashSet<TalentResource>();
-            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var max_sprites = Directory.GetFiles($"{AppData}/Elysium/Data/Sprite/").Length;
+            var max_sprites = Directory.GetFiles($"{Common.Configuration.GamePath}/Data/Sprite/").Length;
             for (int n = 1; n <= max_sprites; n++) {
-                EngineTexture.AddTexture(n, EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Sprite/{n}.png"), EngineTextureType.Sprites);
+                EngineTexture.AddTexture(n, EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Sprite/{n}.png"), EngineTextureType.Sprites);
             }
     
-            var max_icons = Directory.GetFiles($"{AppData}/Elysium/Data/Icon/").Length;
+            var max_icons = Directory.GetFiles($"{Common.Configuration.GamePath}/Data/Icon/").Length;
             for (int n = 1; n <= max_icons; n++) {
-                EngineTexture.AddTexture(n, EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Icon/{n}.png"), EngineTextureType.Icons);
+                EngineTexture.AddTexture(n, EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Icon/{n}.png"), EngineTextureType.Icons);
             }
 
-            var max_items = Directory.GetFiles($"{AppData}/Elysium/Data/Items/").Length;
+            var max_items = Directory.GetFiles($"{Common.Configuration.GamePath}/Data/Items/").Length;
             for (int n = 1; n <= max_items; n++) {
-                items.Add(Item.Read($"{AppData}/Elysium/Data/Items/{n}.item"));
+                items.Add(Item.Read($"{Common.Configuration.GamePath}/Data/Items/{n}.item"));
             }
 
-            var max_talent = Directory.GetFiles($"{AppData}/Elysium/Data/Talent/").Length;
+            var max_talent = Directory.GetFiles($"{Common.Configuration.GamePath}/Data/Talent/").Length;
             for (int n = 1; n <= max_talent; n++) {
-                talents.Add(ReadTalent($"{AppData}/Elysium/Data/Talent/{n}.talent"));
+                talents.Add(ReadTalent($"{Common.Configuration.GamePath}/Data/Talent/{n}.talent"));
             }
         }
 

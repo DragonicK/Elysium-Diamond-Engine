@@ -51,9 +51,8 @@ namespace Elysium_Diamond.DirectX {
             Position = new Point(272, 15);
             Enabled = true;
 
-            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             background = new EngineObject();
-            background.Texture = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/msgbox.png", 480, 128);
+            background.Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/msgbox.png", 480, 128);
             background.Enabled = false;
             background.Size = new Size2(480, 128);
             background.SourceRect = new Rectangle(0, 0, 480, 120);

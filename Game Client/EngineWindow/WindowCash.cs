@@ -156,13 +156,12 @@ namespace Elysium_Diamond.EngineWindow {
             background = new EngineObject();
             background.Position = Position;
             background.Size = new Size2(576, 416);
-            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            background.Texture = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/window_cashshop.png");
+            background.Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/window_cashshop.png");
             background.SourceRect = new Rectangle(0, 0, 576, 416);
     
-            cash_item_background[0] = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/selectchar_charback.png");
-            cash_item_background[1] = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/selectchar_selected.png");
-            slot = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/slot.png");
+            cash_item_background[0] = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/selectchar_charback.png");
+            cash_item_background[1] = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/selectchar_selected.png");
+            slot = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/slot.png");
 
             for (var n = 0; n < MAX_ITEM; n++) {
                 Items[n] = new CashItem();
@@ -299,8 +298,7 @@ namespace Elysium_Diamond.EngineWindow {
             buy_item_background = new EngineObject();
             buy_item_background.Position = BuyItemPosition;
             buy_item_background.Size = new Size2(320, 352);
-            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            buy_item_background.Texture = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/cash_buy.png");
+            buy_item_background.Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/cash_buy.png");
             buy_item_background.SourceRect = new Rectangle(0, 0, 320, 352);
 
             buy_item_slot = new EngineObject();

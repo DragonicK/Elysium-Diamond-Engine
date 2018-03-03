@@ -33,14 +33,11 @@ namespace Elysium_Diamond.EngineWindow {
         /// </summary>
         public static void Initialize() {
             Visible = false;
-
-            string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-
             position = new Point(412, 200);
             background = new EngineObject();
             background.Position = position;
             background.Size = new Size2(167, 200);
-            background.Texture = EngineTexture.TextureFromFile($"{AppData}/Elysium/Data/Graphics/option.png");
+            background.Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/option.png");
             background.SourceRect = new Rectangle(0, 0, 167, 200);
             background.Transparency = 255;
 
