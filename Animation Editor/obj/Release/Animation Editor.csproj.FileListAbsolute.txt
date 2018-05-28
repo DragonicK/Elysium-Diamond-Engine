@@ -1,9 +1,0 @@
-D:\Programing Files\Elysium Diamond\Animation Editor\bin\Release\Animation Editor.exe
-D:\Programing Files\Elysium Diamond\Animation Editor\bin\Release\Animation Editor.pdb
-D:\Programing Files\Elysium Diamond\Animation Editor\obj\Release\Animation_Editor.MainForm.resources
-D:\Programing Files\Elysium Diamond\Animation Editor\obj\Release\Animation_Editor.Properties.Resources.resources
-D:\Programing Files\Elysium Diamond\Animation Editor\obj\Release\Animation Editor.csproj.GenerateResource.Cache
-D:\Programing Files\Elysium Diamond\Animation Editor\obj\Release\Animation Editor.exe
-D:\Programing Files\Elysium Diamond\Animation Editor\obj\Release\Animation Editor.pdb
-D:\Programing Files\Elysium Diamond\Animation Editor\bin\Release\Animation Editor.exe.config
-D:\Programing Files\Elysium Diamond\Animation Editor\obj\Release\Animation Editor.csprojResolveAssemblyReference.cache
