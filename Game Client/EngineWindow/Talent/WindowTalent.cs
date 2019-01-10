@@ -79,12 +79,12 @@ namespace Elysium_Diamond.EngineWindow {
             main_background = new EngineObject();
             main_background.Position = Position;
             main_background.Size = new Size2(800, 416);
-            main_background.Texture = EngineTexture.TextureFromFile("./Data/Graphics/talent_back.png", 800, 416);
+            main_background.Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/talent_back.png", 800, 416);
             main_background.SourceRect = new Rectangle(0, 0, 800, 416);
 
             slot_background = new EngineObject();
             slot_background.Size = new Size2(192, 288);
-            slot_background.Texture = EngineTexture.TextureFromFile("./Data/Graphics/talent_slot_back.png", 192, 288);
+            slot_background.Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/talent_slot_back.png", 192, 288);
             slot_background.SourceRect = new Rectangle(0, 0, 192, 288);
 
             closebutton = new EngineButton("closex", 32, 32);
@@ -98,7 +98,7 @@ namespace Elysium_Diamond.EngineWindow {
             experience.Position = new Point(Position.X + 140, Position.Y + 35);
             experience.Percentage = 50;
 
-            slot = EngineTexture.TextureFromFile("./Data/Graphics/slot.png", 40, 40);
+            slot = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/slot.png", 40, 40);
 
             var new_y = 110;
             var new_x = 0;
@@ -287,11 +287,11 @@ namespace Elysium_Diamond.EngineWindow {
         /// Carrega todos os dados.
         /// </summary>
         private static void OpenTalents() {
-            if (!File.Exists("./Data/Talent.bin")) {
+            if (!File.Exists($"{Common.Configuration.GamePath}/Data/Talent.bin")) {
                 return;
             }
 
-            using (FileStream file = new FileStream("./Data/Talent.bin", FileMode.Open, FileAccess.Read)) {
+            using (FileStream file = new FileStream($"{Common.Configuration.GamePath}/Data/Talent.bin", FileMode.Open, FileAccess.Read)) {
                 BinaryReader reader = new BinaryReader(file);
 
                 //obtem a quantidade de classes

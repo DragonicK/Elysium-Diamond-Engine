@@ -4,6 +4,7 @@ using Elysium_Diamond.Network;
 using Elysium_Diamond.Resource;
 using SharpDX;
 using SharpDX.Direct3D9;
+using System;
 
 namespace Elysium_Diamond.EngineWindow {
     public static class WindowStatus {
@@ -88,10 +89,9 @@ namespace Elysium_Diamond.EngineWindow {
         /// </summary>
         public static void Initialize() {
             Position = new Point(50, 100);
+            slot = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/slot.png", 40, 40);
 
-            slot = EngineTexture.TextureFromFile("./Data/Graphics/slot.png", 40, 40);
-
-            background = new EngineObject("./Data/Graphics/inventory.png");
+            background = new EngineObject($"{Common.Configuration.GamePath}/Data/Graphics/inventory.png");
             background.Size = new Size2(320, 352);
             background.Position = Position;
             background.SourceRect = new Rectangle(0, 0, 320, 352);

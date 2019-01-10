@@ -29,10 +29,9 @@ namespace Elysium_Diamond.DirectX {
             Size = new Size2(width, height);
 
             string language = Enum.GetName(typeof(Language), Common.Configuration.Language);
-
-            texture[(int)EngineButtonStyle.Inactive] = EngineTexture.TextureFromFile($"./Data/Graphics/{language}/{name}_inactive.png", width, height);
-            texture[(int)EngineButtonStyle.Hover] = EngineTexture.TextureFromFile($"./Data/Graphics/{language}/{name}_hover.png", width, height);
-            texture[(int)EngineButtonStyle.Active] = EngineTexture.TextureFromFile($"./Data/Graphics/{language}/{name}_active.png", width, height);
+            texture[(int)EngineButtonStyle.Inactive] = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/{language}/{name}_inactive.png", width, height);
+            texture[(int)EngineButtonStyle.Hover] = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/{language}/{name}_hover.png", width, height);
+            texture[(int)EngineButtonStyle.Active] = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/{language}/{name}_active.png", width, height);
         }
 
         /// <summary>

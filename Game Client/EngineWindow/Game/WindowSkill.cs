@@ -44,7 +44,7 @@ namespace Elysium_Diamond.EngineWindow {
             background = new EngineObject();
             background.Position = Position;
             background.Size = new Size2(608, 384);
-            background.Texture = EngineTexture.TextureFromFile("./Data/Graphics/skill_back.png", 608, 384);
+            background.Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/skill_back.png", 608, 384);
             background.SourceRect = new Rectangle(0, 0, 608, 384);
 
             buttons[0] = new EngineButton("active", 128, 32);
@@ -82,9 +82,9 @@ namespace Elysium_Diamond.EngineWindow {
             buttons[4].Size = new Size2(32, 32);
             // buttons[2].MouseUp += CloseButton_MouseUp;
 
-            slot = EngineTexture.TextureFromFile("./Data/Graphics/slot.png", 40, 40);
-            text = EngineTexture.TextureFromFile("./Data/Graphics/textbox_2.png", 224, 32);
-            desc = EngineTexture.TextureFromFile("./Data/Graphics/textbox_230.png", 288, 256);
+            slot = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/slot.png", 40, 40);
+            text = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/textbox_2.png", 224, 32);
+            desc = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/textbox_230.png", 288, 256);
 
             for (var n = 0; n < MAX_SKILL; n++) {
                 labels[n] = new EngineLabel();

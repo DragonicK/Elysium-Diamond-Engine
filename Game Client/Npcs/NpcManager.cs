@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.IO;
-
+using System;
 
 namespace Elysium_Diamond.Npcs {
     public class NpcManager {
@@ -20,9 +20,9 @@ namespace Elysium_Diamond.Npcs {
         /// </summary>
         /// <returns></returns>
         public static bool OpenData() {
-            if (!File.Exists("./Data/npc.bin")) return false;
+            if (!File.Exists($"{Common.Configuration.GamePath}/Data/npc.bin")) return false;
 
-            using (FileStream file = new FileStream("./Data/npc.bin", FileMode.Open, FileAccess.Read)) {
+            using (FileStream file = new FileStream($"{Common.Configuration.GamePath}/Data/npc.bin", FileMode.Open, FileAccess.Read)) {
                 BinaryReader reader = new BinaryReader(file);
 
                 var lenght = reader.ReadInt32();

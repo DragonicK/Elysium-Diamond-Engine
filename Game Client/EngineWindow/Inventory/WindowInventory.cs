@@ -2,6 +2,7 @@
 using Elysium_Diamond.Resource;
 using SharpDX;
 using SharpDX.Direct3D9;
+using System;
 
 namespace Elysium_Diamond.EngineWindow {
     public static class WindowInventory {
@@ -54,7 +55,7 @@ namespace Elysium_Diamond.EngineWindow {
             background = new EngineObject();
             background.Position = Position;
             background.Size = new Size2(320, 352);
-            background.Texture = EngineTexture.TextureFromFile("./Data/Graphics/inventory.png", 320, 352);
+            background.Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/inventory.png", 320, 352);
             background.SourceRect = new Rectangle(0, 0, 320, 352);
 
             closebutton = new EngineButton("closex", 32, 32);
@@ -64,7 +65,7 @@ namespace Elysium_Diamond.EngineWindow {
             closebutton.Size = new Size2(32, 32);
             closebutton.MouseUp += CloseButton_MouseUp;
 
-            slot = EngineTexture.TextureFromFile("./Data/Graphics/slot.png", 40, 40);
+            slot = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/slot.png", 40, 40);
 
             var n = 0;
             for (int y = 0; y < MAX_Y; y++) {

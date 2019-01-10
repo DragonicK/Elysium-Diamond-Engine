@@ -1,0 +1,11 @@
+[POSITION]
+POS_X      =  180
+POS_Y      =  280 
+POS_HEIGHT =  
+POS_WIDTH  =  
+
+[BORDER]
+BOR_X      =  0
+BOR_Y      =  0
+BOR_HEIGHT =  20
+BOR_WIDTH  =  20

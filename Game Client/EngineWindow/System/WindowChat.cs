@@ -36,14 +36,14 @@ namespace Elysium_Diamond.EngineWindow {
             background = new EngineObject();
             background.Position = position;
             background.Size = new Size2(277, 203);
-            background.Texture = EngineTexture.TextureFromFile($"./Data/Graphics/window_chat.png");
+            background.Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/window_chat.png");
             background.SourceRect = new Rectangle(0, 0, 277, 203);
             background.Transparency = 140;
 
             scroll_background = new EngineObject();
             scroll_background.Position = new Point(position.X + 255, position.Y + 10);
             scroll_background.Size = new Size2(10, 172);
-            scroll_background.Texture = EngineTexture.TextureFromFile($"./Data/Graphics/scroll_background.png");
+            scroll_background.Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/scroll_background.png");
             scroll_background.SourceRect = new Rectangle(0, 0, 10, 172);
             scroll_background.Transparency = 255;
 

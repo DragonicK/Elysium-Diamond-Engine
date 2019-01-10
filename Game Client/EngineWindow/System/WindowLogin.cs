@@ -47,7 +47,7 @@ namespace Elysium_Diamond.EngineWindow {
             background = new EngineObject();
             background.Position = new Point(Position.X - 140, Position.Y);
             background.Size = new Size2(608, 224);
-            background.Texture = EngineTexture.TextureFromFile($"{Environment.CurrentDirectory}\\Data\\Graphics\\window_login.png");
+            background.Texture = EngineTexture.TextureFromFile($"{Common.Configuration.GamePath}/Data/Graphics/window_login.png");
             background.SourceRect = new Rectangle(0, 0, 608, 224);
             background.Transparency = 255;
 

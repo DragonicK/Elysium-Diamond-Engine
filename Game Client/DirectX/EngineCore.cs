@@ -81,7 +81,7 @@ namespace Elysium_Diamond.DirectX {
             NetworkSocket.Initialize();
 
             try {
-                background = new EngineObject($"{Environment.CurrentDirectory}\\Data\\background.png", 1024, 768);
+                background = new EngineObject($"{Common.Configuration.GamePath}/Data/background.png", 1024, 768);
                 background.Size = new Size2(1024, 768);
                 background.SourceRect = new Rectangle(0, 0, 1024, 720);
 

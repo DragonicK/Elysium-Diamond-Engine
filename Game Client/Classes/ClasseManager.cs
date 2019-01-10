@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System;
 
 namespace Elysium_Diamond.Classes {
     public static class ClasseManager {
@@ -14,8 +15,7 @@ namespace Elysium_Diamond.Classes {
         /// </summary>
         public static void Initialize() {
             Classes = new List<ClasseDescription>();
-
-            var value = Directory.GetFiles("./Data/Classes/");
+            var value = Directory.GetFiles($"{Common.Configuration.GamePath}/Data/Classes/");
             foreach (var file in value) { Classes.Add(GetClasse(file)); }
         }
 
